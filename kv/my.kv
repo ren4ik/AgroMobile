@@ -1,0 +1,277 @@
+# -*- coding: utf-8 -*-
+#:import MaterialLabel kivymd.label.MDLabel
+#:import MDTextField kivymd.textfields.MDTextField
+#:import MDRaisedButton kivymd.button.MDRaisedButton
+
+WindowStart:
+    LoginPage:
+    FirstPage:
+    InterId:
+    SelectTree:
+    InterData:
+    NextPage:
+
+<ItemLabel@Label>:
+    font_size: '26sp'
+    size_hint: 1, .5
+
+
+<ItemTextInput@TextInput>:
+    size_hint: 1, 0.5
+    font_size: '26sp'
+    multiline: False
+
+<ItemButton@Button>:
+    size_hint: 1, 0.5
+    font_size: '26sp'
+    background_color: .15, .6, .15, 1
+
+<LoginPage>:
+    name: 'login_page'
+    login: login
+    passw: passw
+
+    GridLayout:
+        rows: 2
+        padding: dp(35)
+
+        AnchorLayout:
+            anchor_x: "center"
+            anchor_y: "center"
+            size_hint: 1, 1
+            Image:
+                source: 'source/logo-full.png'
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, 1
+            spacing: dp(5)
+
+            ItemLabel:
+                text: 'Login'
+
+            ItemTextInput:
+                id: login
+
+            ItemLabel:
+                text: 'Password'
+
+            ItemTextInput:
+                id: passw
+                password: True
+
+            ItemButton:
+                text: 'Sing In'
+                on_press: root.sing_in()
+                on_release: root.manager.transition.direction = 'right'
+
+
+<FirstPage>:
+    name:
+        'first_page'
+
+    GridLayout:
+        cols: 3
+        padding: 10
+
+        GridLayout:
+            cols: 1
+            padding: 5
+            size_hint: .1, .1
+
+        GridLayout:
+            cols: 1
+            padding: 10
+            size_hint: 1, 1
+
+            Label:
+                text:
+                    ' [color=ff3333][b]Wellcome![/b][/color] \n The program is developed in \n [color=ff3333][b]RDev[/b][/color],\n especially for the \n [color=65A04C][i]Association of nut Growers[/i][/color] \n of Uzbekistan.\n You can save data \n to bypass the sectors in the \n [u]offline mode[/u]'
+                multiline: True
+                markup: True
+                font_size: '25sp'
+                valign: 'middle'
+                halign: 'center'
+                size_hint: 1, .9
+
+            ItemButton:
+
+                text:
+                    'First Page'
+                on_release:
+                    app.root.current = 'inter_id'
+                    root.manager.transition.direction = 'right'
+
+        GridLayout:
+            cols: 1
+            padding: 5
+            size_hint: .1, .1
+
+
+<InterId>:
+    name: 'inter_id'
+    id_card: id_card
+
+    GridLayout:
+        rows: 3
+        padding: dp(35)
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, .3
+            spacing: 10
+
+            ItemLabel:
+                text: 'Inter ID Card'
+
+            ItemTextInput:
+                id: id_card
+                input_type: 'number'
+                input_filter: 'int'
+                focus: True
+
+            ItemButton:
+                text: 'Input'
+                on_press: root.inter_id()
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, .3
+            spacing: 10
+
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, .3
+            spacing: 10
+
+
+<SelectTree>:
+    name: 'select_tree'
+    box: box
+    BoxLayout:
+        id: box
+
+
+
+<InterData>:
+    name: 'inter_data'
+
+    GridLayout:
+        cols: 2
+        rows: 30
+        size_hint: 1, .8
+        spacing: 5
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+        Label:
+            text: '1'
+            font_size: 16
+
+        TextInput:
+            text: '1'
+            font_size: 16
+
+
+<NextPage>:
+	name: 'next_page'
+
+
+
+
+
+
+
+
+
+
+
+
+
